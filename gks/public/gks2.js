@@ -12,30 +12,35 @@ const app = Vue.createApp({
             count: 5,
             questions: [
                 {
-                    question: "Indus river originates in –",
-                    answers: {a: 'Kinnaur', b: 'Ladakh', c: 'Nepal', d: 'Tibet'},
-                    correctAnswer: 'd'
-                },
-                {
-                    question: "The hottest planet in the solar system?",
-                    answers: {a: 'Mercury', b: 'Venus', c: 'Mars', d: 'Jupiter'},
-                    correctAnswer: 'b'
-                },
-                {
-                    question: "Where was the electricity supply first introduced in India –",
-                    answers: {a: 'Mumbai', b: 'Dehradun', c: 'Darjeeling', d: 'Chennai'},
+                    img: "../question-img/gkquiz2.gif",
+                    question: "Which is the planet nearest to the sun? ",
+                    answers: {a: 'Earth', b: 'Mars', c: 'Mercury', d: 'Saturn'},
                     correctAnswer: 'c'
                 },
                 {
-                    question: "Which one of the following ports is the oldest port in India?",
-                    answers: {a: 'Mumbai Port', b: 'Chennai Port', c: 'Kolkata Port', d: 'Vishakhapatnam Port'},
+                    img: "../question-img/gkquiz2.gif",
+                    question: "Which is the planet farthest from the sun?",
+                    answers: {a: 'Uranus', b: 'Jupiter', c: 'Mercury', d: 'Neptune'},
+                    correctAnswer: 'd'
+                },
+                {
+                    img: "../question-img/gkquiz2.gif",
+                    question: " ______ is the hottest planet in our solar system.",
+                    answers: {a: 'Mercury', b: 'Venus', c: 'Jupiter', d: 'Earth'},
                     correctAnswer: 'b'
                 },
                 {
-                    question: "Volcanic eruption do not occur in the",
-                    answers: {a: 'Baltic sea', b: 'Black sea', c: 'Caribbean sea', d: 'Caspian sea'},
-                    correctAnswer: 'a'
+                    img: "../question-img/gkquiz2.gif",
+                    question: " ______ is called the “Red Planet” in our solar system.",
+                    answers: {a: 'Mercury', b: 'Venus', c: 'Earth', d: 'Mars'},
+                    correctAnswer: 'd'
                 },
+                {
+                    img: "../question-img/gkquiz2.gif",
+                    question: "The planet with the highest number of moons is",
+                    answers: {a: 'Saturn', b: 'Jupiter', c: 'Neptune', d: 'Uranus'},
+                    correctAnswer: 'a'
+                }
             ]
         }
     },

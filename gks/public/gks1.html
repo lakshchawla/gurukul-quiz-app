@@ -9,14 +9,15 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 
-<body class="antialiased text-gray-700 bg-gray-100 ">
-    <div class="flex w-full h-screen justify-center items-center" id="app">
+<body class="antialiased text-gray-700 bg-gray-100 mt-20 mb-20">
+    <div class="flex w-full justify-center items-center" id="app">
         <div class="w-full max-w-xl">
-            <h1 class="font-bold text-5xl text-center text-pink-600 font-serif">
+            <h1 class="font-bold text-5xl text-center text-blacks font-serif">
                 GK Stage 1
             </h1>
             <div class="bg-gray-200 p-12 rounded-lg shadow-lg w-full mt-8">
                 <div v-if="index < count">
+                    <img src="./../../question-img/gkquiz1.png" alt="" srcset="">
                     <p class="text-2xl font-bold">
                         {{ questions[index]['question'] }}
                     </p>
@@ -74,7 +75,7 @@
                             </a>
                         </div>
                         <div class="mt-6 flow-root">
-                            <a href="./../../pages/main.html"
+                            <a href="/index.html"
                                 class="float-right px-2 py-1 bg-red-600 text-white text-sm font-bold tracking-wide rounded-full">
                                 EXIT
                             </a>

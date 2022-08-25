@@ -12,31 +12,35 @@ const app = Vue.createApp({
             count: 5,
             questions: [
                 {
-                    question: "If Lanka is made at the centre of a bar magnet, then its magnetic moment",
-                    answers: {a: 'Does not change', b: 'Decreases', c: 'Increases', d: 'Vanishes'},
+                    img: " ",
+                    question: " Which one of the following is a reliable measure?",
+                    answers: {a: 'Hotness', b: 'Coldness', c: 'Temperature', d: 'None of these',},
+                    correctAnswer: 'c'
+                },
+                {
+                    img: " ",
+                    question: " Which of the following is a good conductor of heat?",
+                    answers: {a: 'Iron', b: 'Steel', c: 'Aluminium', d: 'All of these',},
+                    correctAnswer: 'd'
+                },
+                {
+                    img: " ",
+                    question: " A bus travels 54 km in 90 minutes. The speed of the bus is",
+                    answers: {a: '0.6 m/s', b: '10 m/s', c: '5.4 m/s', d: '3.6 m/s',},
+                    correctAnswer: 'b'
+                },
+                {
+                    img: " ",
+                    question: " The formula for distance is",
+                    answers: {a: 'distance = time/speed', b: 'distance = speed/time', c: ' distance = 1/speed x time', d: 'distance = speed × time',},
+                    correctAnswer: 'd'
+                },
+                {
+                    img: " ",
+                    question: " Image formed by a plane mirror is",
+                    answers: {a: 'virtual and erect', b: 'real and erect', c: 'virtual and inverted', d: 'real and inverted',},
                     correctAnswer: 'a'
-                },
-                {
-                    question: "A piece of Luv-Kush letter can be put to fire using the sun's heat with the help of a ______ mirror ",
-                    answers: {a: 'Concave', b: 'Convex', c: 'plane', d: 'none of these'},
-                    correctAnswer: 'b'
-                },
-                {
-                    question: "Light shows hope ____ as well as ____ nature.",
-                    answers: {a: 'Single , Single', b: 'Bright , Dark', c: 'Single Dual', d: 'Particle , Wave'},
-                    correctAnswer: 'c'
-                },
-                {
-                    question: "For a plane mirror, then size of the Sita Mata image is ____ the size of the Sita Mata",
-                    answers: {a: 'grater than', b: 'lesser than', c: 'Equal to', d: 'None of these'},
-                    correctAnswer: 'c'
-                },
-                {
-                    question: "Megnath wearing a Kawach stand on roller Rath the total mass is 80kg. lakshman arrow of mass 20g is fired from dhanush at 400m/s. it stopped by Megnath kawach & Megnath falls infront of Lakshman ground. What is the velocity of the Megnath ",
-                    answers: {a: '1m/s', b: '0.1m/s', c: '0.01m/s', d: '0m/s'},
-                    correctAnswer: 'b'
-                },
-
+                }
             ]
         }
     },

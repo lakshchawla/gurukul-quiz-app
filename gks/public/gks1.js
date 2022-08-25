@@ -10,34 +10,36 @@ const app = Vue.createApp({
             correctAnswer: 0,
             wrongAnswer: 0,
             count: 5,
-            questions: [
-                {
-                    question: "Which one of the following river flows between Vindhyan and Satpura ranges?",
-                    answers: {a: 'Narmada', b: 'Mahanadi', c: 'Son', d: 'Netravati'},
-                    correctAnswer: 'a'
-                },
-                {
-                    question: "The Central Rice Research Station is situated in?",
-                    answers: {a: 'Chennai', b: 'Cuttack', c: 'Bangalore', d: 'Quilon'},
-                    correctAnswer: 'b'
-                },
-                {
-                    question: "Who among the following wrote Sanskrit grammar?",
-                    answers: {a: 'Kalidasa', b: 'Charak', c: 'Panini', d: 'Aryabhatt'},
-                    correctAnswer: 'c'
-                },
-                {
-                    question: "Which among the following headstreams meets the Ganges in last?",
-                    answers: {a: 'Alaknanda', b: 'Pindar', c: 'Mandakini', d: 'Bhagirathi'},
-                    correctAnswer: 'd'
-                },
-                {
-                    question: "Tsunamis are not caused by",
-                    answers: {a: 'Hurricanes', b: 'Earthquakes', c: 'Undersea landslides', d: 'Volcanic eruptions'},
-                    correctAnswer: 'a'
-                },
-
-            ]
+            questions: [{
+                img: "../question-img/gkquiz1.png",
+                question: "The Design and manufacturing process for the national flag is related by : ",
+                answers: {a: 'Khadi Gram Udhyog, India', b: 'Bureau of Indian Standards', c: 'Flag Foundation of India', d: 'Parliament of India'},
+                correctAnswer: 'b'
+            },
+            {
+                img: "../question-img/gkquiz1.png",
+                question: "What is size ( width to length) ratio of Indian National FLag?",
+                answers: {a: '3:6', b: '2:3', c: '2:2', d: '2:4'},
+                correctAnswer: 'b'
+            },
+            {
+                img: "../question-img/gkquiz1.png",
+                question: "What is the Preferred fabric for Weaving the Indian Tricolor Flag",
+                answers: {a: 'Jute', b: 'Cotton', c: 'Polyester', d: 'Khadi'},
+                correctAnswer: 'd'
+            },
+            {
+                img: "../question-img/gkquiz1.png",
+                question: "When was the flag for free Indian adopted ? ",
+                answers: {a: '22 July 1947', b: '26 January 1950', c: '15 August 1947', d: '30 January 1950'},
+                correctAnswer: 'a'
+            },
+            {
+                img: "../question-img/gkquiz1.png",
+                question: "Who designed the indian national flag",
+                answers: {a: 'Mahatma Gandhi', b: 'Lal Bahadur Shastri', c: 'Pingali Venkayya', d: 'Jawahar Lal Nehru'},
+                correctAnswer: 'c'
+            }]
         }
     },
     methods: {
