@@ -27,11 +27,13 @@
                 <div v-if="index < count">
 
                     <p id="question" class="d-none">
-                        {{ questions[index]['question'] }}
+                        {{ questions[index]['question'] }}......
                         {{ questions[index]['answers'].a }},
                         {{ questions[index]['answers'].b }},
                         {{ questions[index]['answers'].c }}, or
-                        {{ questions[index]['answers'].d }}
+                        {{ questions[index]['answers'].d }}.
+
+                        Select the right option.
                     </p>
 
                     <!-- <img src="/question-img/{{questions[index]['img']}}" alt="{{questions[index]['img']}}" srcset=""> -->
@@ -105,24 +107,9 @@
         </div>
     </div>
     <script src="phys1.js"></script>
-    
+
     <script>
         const textarea = document.getElementById('question');
-        const voiceList = "Rishi (en-IN)";
-        let synth = speechSynthesis,
-            isSpeaking = true;
-
-        function textToSpeech(text) {
-            let utterance = new SpeechSynthesisUtterance(text);
-            for (let voice of synth.getVoices()) {
-                if (voice.name === voiceList.value) {
-                    utterance.voice = voice;
-                }
-            }
-            synth.speak(utterance);
-        }
-
-
         document.addEventListener('keydown', (event) => {
             if (event.code === "Space") {
                 if (textarea.innerText !== "") {
@@ -143,10 +130,8 @@
                     }
                 }
             }
-
-
-
         }, false);
+
     </script>
 </body>
 

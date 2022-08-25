@@ -1,7 +1,19 @@
 
-var myTrack = new Audio('../Audio/ramjiP1.mp3')
-var myCor = new Audio('../Audio/ramjiP2.mp3')
-var cong = new Audio('../Audio/fin.mp3')
+var voiceList = "Rishi (en-IN)";
+let synth = speechSynthesis,
+    isSpeaking = true;
+
+function textToSpeech(text) {
+    let utterance = new SpeechSynthesisUtterance(text);
+    for (let voice of synth.getVoices()) {
+        if (voice.name === voiceList.value) {
+            utterance.voice = voice;
+        }
+    }
+    utterance.rate = 0.8;
+    synth.speak(utterance);
+}
+
 
 const app = Vue.createApp({
     data() {
@@ -47,14 +59,17 @@ const app = Vue.createApp({
     },
     methods: {
         answered(e) {
-            this.selectedAnswer = e.target.value
+            this.selectedAnswer = e.target.value;
+   
             if(this.selectedAnswer == this.questions[this.index]['correctAnswer'])
             {
+                textToSpeech("Right answer")
                 this.correctAnswer++
                 if(this.correctAnswer)
                     myCor.play()++
             }
             else{
+                textToSpeech("Wrong answer")
                 this.wrongAnswer++
                 if(this.wrongAnswer)
                     myTrack.play()++
