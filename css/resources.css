@@ -204,3 +204,12 @@ h1 {
     margin: 0 0 2rem 0;
   }
 }
+
+.mt20vh{
+  margin-top: 10vh;
+}
+
+body{
+  background-image: linear-gradient(180deg, #ff7700, #450c00);
+
+}

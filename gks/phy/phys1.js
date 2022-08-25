@@ -13,7 +13,7 @@ const app = Vue.createApp({
             count: 5,
             questions: [
                 {
-                    img: " ",
+                    img: "gk.png",
                     question: "Earlier mode of transport on water was ?",
                     answers: {a: 'Aeroplane', b: 'Hovercart', c: 'Bullockcart', d: 'Logs tied together',},
                     correctAnswer: 'd'
@@ -78,5 +78,7 @@ const app = Vue.createApp({
 
     }
 })
+
+
 
 app.mount('#app')
