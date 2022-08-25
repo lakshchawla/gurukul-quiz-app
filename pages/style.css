@@ -216,7 +216,7 @@ body {
 }
 
 .Hero {
-  min-height: 90vh;
+  height: 40vh;
 }
 
 .introText h1 {
@@ -257,4 +257,9 @@ body {
 .navbar-brand {
   font-family: "Samarkan", sans-serif;
   font-size: 40px;
+}
+
+
+.Dashboard{
+  margin-top: 15vh;
 }
