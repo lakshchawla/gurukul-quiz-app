@@ -7,13 +7,16 @@
     <title>Physics stage 1</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../public/dist/styles.css" />
+
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-        #speak {
+        button {
             background-image: none;
             background: none;
             background-color: transparent;
         }
+
+
     </style>
 </head>
 
@@ -36,24 +39,40 @@
                         Select the right option.
                     </p>
 
-                    <!-- <img src="/question-img/{{questions[index]['img']}}" alt="{{questions[index]['img']}}" srcset=""> -->
+                    <img src="/question-img/phy1.gif" class="text-center ms-auto me-auto w-75 mb-4" alt="{{questions[index]['img']}}" srcset="">
 
                     <p class="text-2xl font-bold" id="question">
                         {{ questions[index]['question'] }}
                     </p>
 
 
+                    
                     <label :for="key" class="block mt-4 border border-yellow-500 rounded-lg py-2 px-6 text-lg"
                         v-for="answer,key in questions[index]['answers']" :class="{'hover:bg-cyan-300 cursor-pointer 6' : selectedAnswer == ''},
                         {'bg-red-200' : selectedAnswer == key},
-                        {'bg-green-200' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}">
-                        <input type="radio" :id="key" class="hidden" :value="key" @change="answered($event)"
+                        {'bg-green-200' : key == questions[index]['correctAnswer'] && selectedAnswer != ''}" onmouseover="voice_speech(this)">
+                        <input type="radio" :id="key"  class="hidden" :value="key" @change="answered($event)"
                             v-model="selectedAnswer" :disabled="selectedAnswer != ''" />
                         {{ answer }}
                     </label>
-                    <div class="mt-6 flow-root">
-                       
-                    </div>
+
+                    <div class="accordion mt-3" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" onmouseover="voice_speech(hint)">
+                              Hint
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <p id="hint">{{ questions[index]['hint'] }}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
                     <div class="mt-6 flow-root">
                         <button
                             class="float-right px-5 py-2 bg-indigo-600 text-white text-sm font-bold tracking-wide rounded-full"
@@ -105,6 +124,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="phys1.js"></script>
 
     <script>
@@ -133,5 +153,5 @@
 
     </script>
 </body>
-
+<script src="/voice.js"></script>
 </html>

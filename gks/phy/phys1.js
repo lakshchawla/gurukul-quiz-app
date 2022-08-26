@@ -14,6 +14,17 @@ function textToSpeech(text) {
     synth.speak(utterance);
 }
 
+// var kbAns = '';
+// document.addEventListener(
+//     "keydown",
+//     (event) => {
+//       kbAns = event.code.slice(5,6).toLowerCase();
+//       console.log(kbAns);
+//     },
+//     false
+// );
+  
+
 
 const app = Vue.createApp({
     data() {
@@ -25,10 +36,12 @@ const app = Vue.createApp({
             count: 5,
             questions: [
                 {
-                    img: "gk.png",
+                    img: " ",
                     question: "Earlier mode of transport on water was ?",
-                    answers: {a: 'Aeroplane', b: 'Hovercart', c: 'Bullockcart', d: 'Logs tied together',},
-                    correctAnswer: 'd'
+                    answers: {a: '1. Aeroplane', b: '2. Hovercart', c: '3. Bullockcart', d: '4. Logs tied together',},
+                    correctAnswer: 'd',
+                    hint: "A dugout canoe or simply dugout is a boat made from a hollowed tree. Other names for this type of boat is logboat."
+
                 },
                 {
                     img: " ",
@@ -60,6 +73,7 @@ const app = Vue.createApp({
     methods: {
         answered(e) {
             this.selectedAnswer = e.target.value;
+            
    
             if(this.selectedAnswer == this.questions[this.index]['correctAnswer'])
             {
